@@ -13,7 +13,7 @@ export class AccountService implements AccountRepository {
   }
 
   private handleError(error: Error | unknown) {
-    // Acá implementaríamos un logger
+    // Acá implementaríamos un logger como Winston
     if (error instanceof Error) {
       console.error("Message error: ", error.message);
     } else {

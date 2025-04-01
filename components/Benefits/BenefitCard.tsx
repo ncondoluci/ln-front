@@ -71,22 +71,17 @@ export const BenefitCard = (benefitData: AccountTagged, priority?: boolean) => {
 export const BenefitCardSkeleton = () => {
   return (
     <div className="overflow-hidden rounded shadow-sm">
-      {/* Image skeleton */}
       <div className="h-28 bg-gray-200 animate-pulse"></div>
 
-      {/* Content skeleton */}
       <div className="bg-white p-4">
-        {/* Brand name skeleton */}
         <div className="h-5 w-20 bg-gray-200 rounded animate-pulse mb-2"></div>
 
-        {/* Discount percentages skeleton */}
         <div className="flex space-x-2 mb-2">
           <div className="h-5 w-10 bg-gray-200 rounded animate-pulse"></div>
           <div className="h-5 w-10 bg-gray-300 rounded animate-pulse"></div>
           <div className="h-5 w-10 bg-gray-200 rounded animate-pulse"></div>
         </div>
 
-        {/* Distance skeleton */}
         <div className="flex items-center">
           <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
         </div>

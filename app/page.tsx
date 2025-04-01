@@ -5,7 +5,6 @@ import Slider from "@/components/Slider";
 
 const sliderImages = [
   {
-    // url: "/placeholder.svg?height=600&width=1200",
     url: "https://backwebclub-media.glanacion.com/Club.LN-Strapi/mobile_slide_tiendamia_89e30d7454.jpg",
     name: "TIENDA MIA",
     promo: {

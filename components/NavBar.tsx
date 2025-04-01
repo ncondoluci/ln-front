@@ -7,7 +7,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Handle scroll effect for navbar background
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {

@@ -25,42 +25,39 @@ export default function Slider({ images, autoplaySpeed = 5000 }: SliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  // Function to go to next slide
   const goToNext = useCallback(() => {
     if (!isTransitioning) {
       setIsTransitioning(true);
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      setTimeout(() => setIsTransitioning(false), 500); // Match this with CSS transition duration
+      setTimeout(() => setIsTransitioning(false), 500);
     }
   }, [images.length, isTransitioning]);
 
-  // Function to go to previous slide
   const goToPrev = useCallback(() => {
     if (!isTransitioning) {
       setIsTransitioning(true);
       setCurrentIndex(
         (prevIndex) => (prevIndex - 1 + images.length) % images.length
       );
-      setTimeout(() => setIsTransitioning(false), 500); // Match this with CSS transition duration
+      setTimeout(() => setIsTransitioning(false), 500);
     }
   }, [images.length, isTransitioning]);
 
-  // Function to go to a specific slide
   const goToSlide = (index: number) => {
     if (!isTransitioning && index !== currentIndex) {
       setIsTransitioning(true);
       setCurrentIndex(index);
-      setTimeout(() => setIsTransitioning(false), 500); // Match this with CSS transition duration
+      setTimeout(() => setIsTransitioning(false), 500);
     }
   };
 
-  // Autoplay functionality
+  // Autoplay
   useEffect(() => {
     const interval = setInterval(goToNext, autoplaySpeed);
     return () => clearInterval(interval);
   }, [goToNext, autoplaySpeed]);
 
-  // Handle keyboard navigation
+  // Para navegar con las flechas del teclado
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
@@ -97,7 +94,7 @@ export default function Slider({ images, autoplaySpeed = 5000 }: SliderProps) {
             />
             <div className="absolute inset-0 bg-black/40"></div>
 
-            {/* Content overlay */}
+            {/* Overlay */}
             <div className="absolute inset-0 flex items-center">
               <div className="container mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center">
                 {/* Promo section */}
