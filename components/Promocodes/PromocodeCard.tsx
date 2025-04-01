@@ -33,15 +33,11 @@ export const PromocodeCard = (promoData: AccountFlaged, priority?: boolean) => {
 export const DiscountCardSkeleton = () => {
   return (
     <div className="overflow-hidden rounded shadow-sm">
-      {/* Image skeleton */}
       <div className="h-28 bg-gray-200 animate-pulse"></div>
 
-      {/* Content skeleton */}
       <div className="bg-blue-600 p-4">
-        {/* Brand name skeleton */}
         <div className="h-5 w-20 bg-blue-500 rounded animate-pulse mb-2"></div>
 
-        {/* Button skeleton */}
         <div className="h-7 w-full bg-blue-500 rounded animate-pulse"></div>
       </div>
     </div>
