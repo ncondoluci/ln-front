@@ -1,5 +1,4 @@
 import { BenefitsSection } from "@/components/Benefits/BenefitsSection";
-import { CardSkeleton } from "@/components/common/Card";
 import Navbar from "@/components/NavBar";
 import { PromocodeSection } from "@/components/Promocodes/PromocodeSection";
 import Slider from "@/components/Slider";

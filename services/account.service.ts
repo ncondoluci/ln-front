@@ -9,7 +9,7 @@ export class AccountService implements AccountRepository {
   private readonly baseUrl: string;
 
   constructor(baseUrl: string) {
-    this.baseUrl = `${baseUrl}/account`; // http://localhost:3000/accounts
+    this.baseUrl = `${baseUrl}/accounts`;
   }
 
   private handleError(error: Error | unknown) {
